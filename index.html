@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <!--<script src="./js/main.js" defer></script>-->
-    <title>Document</title>
+    <title>HOME</title>
 </head>
 <body>
     <!--holaaa-->
@@ -53,19 +53,19 @@
                     <a href="#"><p>INICIO</p></a>
                 </nav>
                 <nav class="navegacion">
-                    <a href="#"><p>PRODUCTOS</p></a>
+                    <a href="consultar.html"><p>CONSULTAR</p></a>
                 
                 </nav>
                 <nav class="navegacion">
-                    <a href="#"><p>CONTACTO</p></a>
+                    <a href="crear.html"><p>CREAR</p></a>
                 </nav>
                 <nav class="navegacion">
-                    <a href="#"><p>COMO COMPRAR</p></a>
+                    <a href="eliminar.html"><p>ELIMINAR</p></a>
                     
                 </nav>
                 <nav class="navegacion">
-                    <a href="#">
-                        <p>POLITICAS</p>
+                    <a href="modificar.html">
+                        <p>MODIFICAR</p>
                     </a></nav>
             </div>
         </div>
@@ -90,7 +90,7 @@
 
                 let data = await respuesta.json();
 
-                console.log(data); // Nuestros productos estan disponibles dentro de payload { payload: Array(19) }
+                console.log(data); 
 
                 let productos = data.payload; 
 

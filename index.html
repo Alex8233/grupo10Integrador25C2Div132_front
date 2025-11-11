@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="https://acdn-us.mitiendanube.com/stores/006/296/350/themes/common/logo-1444518768-1748714067-c86f57064af934abbc8cf8f22bf870571748714067-480-0.webp">
     <!--<script src="./js/main.js" defer></script>-->
     <title>HOME</title>
 </head>
@@ -75,9 +76,6 @@
     <main>
         <section id="contenedorProducto"></section>
     </main>
-    <footer>
-        <form action=""></form>
-    </footer>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script>
@@ -108,8 +106,8 @@
             array.forEach(producto => {
                 htmlProducto += `
                     <div class="card-producto">
-                        <img src="${producto.img_url}" alt="${producto.nombre_producto}">
-                        <h5>${producto.nombre_producto}</h5>
+                        <img src="${producto.img_url}" alt="${producto.nombre}">
+                        <h5>${producto.nombre}</h5>
                         <p>Id: ${producto.id}</p>
                         <p>$${producto.precio}</p>
                     </div>

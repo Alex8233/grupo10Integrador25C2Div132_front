@@ -69,7 +69,9 @@
                     </a></nav>
             </div>
         </div>
-         <main class = "contenedor-form">
+        
+    </header>
+     <main class = "contenedor-form">
             
 
             <form id="getProducts-form" class="products-form">
@@ -88,9 +90,7 @@
                 <ul id="listado-productos"></ul>
             </div>
         </main>
-        <div id="contenedor-productos">
-            <ul id="listado-productos"></ul>
-        </div>
+    
         <script>
             let getProducts_form = document.getElementById("getProducts-form");
             let listado_productos = document.getElementById("listado-productos");
@@ -136,14 +136,13 @@
 
             let htmlProducto = `
                 <li class="li-listados">
-                    <img src="${producto.img_url}" alt="${producto.nombre_producto}" class="img-listados">
-                    <p>Id: ${producto.id_producto}/ Nombre: ${producto.nombre_producto}/ <strong>Precio: $${producto.precio}</strong></p>
+                    <img src="${producto.img_url}" alt="${producto.nombre}" class="img-listados">
+                    <p>Id: ${producto.id}/ Nombre: ${producto.nombre}/ <strong>Precio: $${producto.precio}</strong></p>
                 </li>
                 `;
 
             listado_productos.innerHTML = htmlProducto;
         }
-        </script>
-    </header>
+    </script>
 </body>
 </html>

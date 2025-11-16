@@ -104,6 +104,29 @@ carrito
     justify-content: center;
     margin-top: 30px;
 }
+
+/*
+
+buscar por categoria 
+
+*/
+ .contenedor-categoria{
+display: none;
+} 
+ .navegacion:hover  .contenedor-categoria{
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    background-color: #ffffff;
+    border: 1px solid #3333331A;
+ }
+.navegacion-categoria{
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+}
 /*cada vez que pasamos el cursor arriba del carrito se va a mostrar todos los productos que fueron agregados al carrito */
 .header-carrito a:hover .contenedor-carrito{
     display: flex;
@@ -242,3 +265,16 @@ FORMULARIO
 }
 /* .contenedor-input .submit{
 } */
+ /*
+ footer
+ */
+ .autores {
+     background-color: #222121;
+     color : white;
+     display:  flex;
+     flex-direction:row;
+     justify-content: space-around;
+     align-items: center;
+    bottom: 0;
+
+ }

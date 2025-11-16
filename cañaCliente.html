@@ -6,11 +6,9 @@
     <meta name="author" content="ALEX ZALAZAR , SANTIAGO BASSO">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" href="https://acdn-us.mitiendanube.com/stores/006/296/350/themes/common/logo-1444518768-1748714067-c86f57064af934abbc8cf8f22bf870571748714067-480-0.webp">
-    <!--<script src="./js/main.js" defer></script>-->
-    <title>HOME</title>
+    <title>CAÑA DE PESCA</title>
 </head>
 <body>
-    <!--holaaa-->
     <header>
         <div class="header-main">
             <div class="header-busqueda">
@@ -22,13 +20,17 @@
                     <img src="https://acdn-us.mitiendanube.com/stores/006/296/350/themes/common/logo-1444518768-1748714067-c86f57064af934abbc8cf8f22bf870571748714067-480-0.webp" alt="logo">
                 </div>
                 <div class="header-registro" >
+
+                    <!-- //////////////////////////////////////////////////////////////////////////////
+                    COLOCAR NOMBRE DE USUARIO
+                    /////////////////////////////////////////////////////////////////////////////7//////-->
                     <div class="registro">
                         <ion-icon name="person-outline"></ion-icon>
                         <div>
                             <h6>¡Hola! inicia seccion</h6>
-                            <a href="#" class="crear-cuenta">
+                            <!-- <a href="#" class="crear-cuenta">
                                 <p>O puedes registrarte</p>
-                            </a>
+                            </a> -->
                         </div>
                         
                     </div>
@@ -52,81 +54,35 @@
         <div class="header-two">
             <div class="header-nav">
                 <nav class="navegacion">
-                    <a href="#"><p>INICIO</p></a>
+                    <a href="indexCliente.html"><p>INICIO</p></a>
                 </nav>
-                <nav class="navegacion">
-                    <a href="consultar.html"><p>CONSULTAR</p></a>
+                <nav class=" navegacion">
+                    <a href="#"><p>CATEGORIA</p>
+                    </a>
+                    <div class="contenedor-categoria">
+                        <nav class="navegacion navegacion-categoria">
+                            <a href="#"><p>CAÑA</p></a>
+                        </nav>
+                        <nav class="navegacion navegacion-categoria">
+                            <a href="reelCliente.html"><p>REEL</p></a>
+                        </nav>
+                        
+                    </div>
                 
                 </nav>
-                <nav class="navegacion">
-                    <a href="crear.html"><p>CREAR</p></a>
-                </nav>
-                <nav class="navegacion">
-                    <a href="eliminar.html"><p>ELIMINAR</p></a>
-                    
-                </nav>
-                <nav class="navegacion">
-                    <a href="modificar.html">
-                        <p>MODIFICAR</p>
-                    </a></nav>
             </div>
         </div>
         
-        
+          
     </header>
-    <main>
+       <main>
         <section id="contenedorProducto"></section>
     </main>
-    <footer class="autores">
+        <footer class="autores">
         <H3>SANTIAGO BASSO</H3>
         <H3>ALEX ZALAZAR</H3>
     </footer>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script>
-          let contenedorProductos = document.getElementById("contenedorProducto");
-        const url = "http://localhost:3000/productos"; // Guardamos en una variable la url de nuestro endpoint
-
-        async function obtenerProductos() {
-            try {
-                let respuesta = await fetch(url); // Hacemos una peticion a nuestro nuevo endpoint en http://localhost:3000/products
-
-                let data = await respuesta.json();
-
-                console.log(data); 
-
-                let productos = data.payload; 
-
-                mostrarProductos(productos);
-
-            } catch(error) {
-                console.error(error);
-            }
-        }
-        function mostrarProductos(array) {
-            console.table(array); // Recibimos correctamente en formato tabla los productos que nos manda la funcion obtenerProductos()
-
-            let htmlProducto = "";
-
-            array.forEach(producto => {
-                htmlProducto += `
-                    <div class="card-producto">
-                        <img src="${producto.img_url}" alt="${producto.nombre}">
-                        <h5>${producto.nombre}</h5>
-                        <p>Id: ${producto.id}</p>
-                        <p>$${producto.precio}</p>
-                    </div>
-                `;
-            });
-
-            contenedorProductos.innerHTML = htmlProducto;
-        }
-
-        function init() {
-            obtenerProductos()
-        }
-
-        init();
-    </script>
 </body>
 </html>
